@@ -10,20 +10,24 @@ export default function App() {
 
         <footer>
           This project was coded by{" "}
-          <a href="https://www.shecodes.io/students/353-octavia-brown" target="_blank">
+          <a href="https://www.shecodes.io/students/353-octavia-brown" 
+          target="_blank"
+          rel="noopener noreferrer">
             Octavia Brown
           </a>{" "}
           and is{" "}
           <a
             href="https://github.com/tavia929/weather-react"
             target="_blank"
-          >
+            rel="noopener noreferrer"
+            >
             open-sourced on GitHub
           </a>{" "}
           and{" "}
           <a
             href="https://objective-elion-e8b66d.netlify.app"
             target="_blank"
+            rel="noopener noreferrer"
           >
             hosted on Netlify
           </a>
