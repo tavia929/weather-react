@@ -3,6 +3,7 @@ import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast() {
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   return (
     <div className="WeatherForecast">
       <div className="row">
