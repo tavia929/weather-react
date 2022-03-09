@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="New York" />
-
+        <h1> test app.js file </h1>
         <footer>
           This project was coded by{" "}
           <a href="https://www.shecodes.io/students/353-octavia-brown" 
