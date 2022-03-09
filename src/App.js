@@ -19,16 +19,14 @@ export default function App() {
           <a
             href="https://github.com/tavia929/weather-react"
             target="_blank"
-            rel="noopener noreferrer"
-            >
+            rel="noopener noreferrer">
             open-sourced on GitHub
           </a>{" "}
           and{" "}
           <a
             href="https://objective-elion-e8b66d.netlify.app"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             hosted on Netlify
           </a>
         </footer>
