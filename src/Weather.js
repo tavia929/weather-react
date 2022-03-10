@@ -60,8 +60,33 @@ if (weatherData.ready) {
               <div className="line-break"></div>
           </div>
           <WeatherInfo data={weatherData} />
-          <small className="github">This was coded by <a href="https://www.linkedin.com/in/michellehtran/" target="_blank" rel="noreferrer">Michelle Tran</a> and is open-source on <a href="https://github.com/misiucodes/weatherapp-react" target="_blank" rel="noreferrer">Github <strong>♡</strong></a></small>
+<footer>
+This project was coded by{" "}
+<a href="https://www.shecodes.io/students/353-octavia-brown" 
+target="_blank"
+rel="noopener noreferrer">
+  Octavia Brown
+</a>{" "}
+and is{" "}
+<a
+  href="https://github.com/tavia929/weather-react"
+  target="_blank"
+  rel="noopener noreferrer"
+  >
+  open-sourced on GitHub
+</a>{" "}
+and{" "}
+<a
+  href="https://objective-elion-e8b66d.netlify.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  >
+  hosted on Netlify
+</a>
+</footer>
+  
       </div>
+
   );
 } else {
    search();
