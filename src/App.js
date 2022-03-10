@@ -1,6 +1,7 @@
 import React from "react";
 import Weather from "./Weather";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
@@ -9,7 +10,7 @@ export default function App() {
         <Weather defaultCity="New York" />
 
         <h1> test app.js file </h1>
-        
+
         <footer>
           This project was coded by{" "}
           <a href="https://www.shecodes.io/students/353-octavia-brown" 

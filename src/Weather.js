@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -11,7 +10,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      coord: response.data.coord,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -32,40 +31,40 @@ export default function Weather(props) {
   }
   
   function search() {
-    const apiKey = "88d4eb2daf123ed03c1fcc34e85f4ce9";
+    let apiKey = "88d4eb2daf123ed03c1fcc34e85f4ce9";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
-  if (weatherData.ready) {
-    return (
-      <div className="Weather">
+  let form = (
+    <div className="col-sm-12 col-md-12 col-lg-12">
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                type="search"
-                placeholder="Enter a city.."
-                className="form-control"
-                autoFocus="on"
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-3">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
-              />
-            </div>
-          </div>
+           <i className="fas fa-search icon-search"></i>
+           <input 
+            type="search" 
+            className="form-control opacity-50" 
+            placeholder="Enter a city..." 
+            onChange={handleCityChange} 
+            autoFocus={false} 
+            autoComplete="false"/>
         </form>
-        <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+    </div>
+);
+
+if (weatherData.ready) { 
+  return (
+    <div className="container">
+          <div className="search-container">
+              <h2>The only weather forecast you need</h2>
+              {form}
+              <div className="line-break"></div>
+          </div>
+          <WeatherInfo data={weatherData} />
+          <small className="github">This was coded by <a href="https://www.linkedin.com/in/michellehtran/" target="_blank" rel="noreferrer">Michelle Tran</a> and is open-source on <a href="https://github.com/misiucodes/weatherapp-react" target="_blank" rel="noreferrer">Github <strong>♡</strong></a></small>
       </div>
-    );
-  } else {
-    search();
-    return "Loading...";
-  }
+  );
+} else {
+   search();
+   return form;
+}
 }

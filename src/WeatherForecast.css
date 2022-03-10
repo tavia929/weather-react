@@ -1,8 +1,38 @@
-.WeatherForecast {
-    text-align: center;
-  }
-  
-  .WeatherForecast-temperature-min {
-    opacity: 0.6;
-    margin-left: 5px;
-  }
+canvas {
+  margin: 10px auto;
+  display: block;
+}
+
+.weather-forecast-container {
+  padding-top: 40px;
+}
+
+.daily-forecast-container {
+  display: block;
+  margin-top: 77px !important;
+  padding-left: 20px;
+  justify-content: center;
+  padding: 15px auto;
+}
+
+.daily-forecast-weekday {
+  text-align: center;
+  font-size: 15px !important;
+  margin: 10px auto 5px auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: light;
+}
+
+.daily-temps {
+  text-align: center;
+}
+
+.daily-forecast-description {
+  text-align: center;
+  font-size: 10px;
+}
+
+.row {
+  --bs-gutter-x: -0.5rem;
+  margin-top: 20px;
+}

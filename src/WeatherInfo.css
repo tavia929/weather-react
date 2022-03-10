@@ -1,0 +1,83 @@
+.weather-info {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    height: 700;
+  }
+  
+  img.weather-icon {
+    top: -2px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 76px;
+    width: 80px;
+    margin-right: -10px;
+  }
+  
+  h4 {
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    margin-top: -6px !important;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  h5 {
+    font-size: 1.5vw;
+    margin-bottom: -15px !important;
+    margin-top: 40px !important;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  div.city {
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 300;
+  }
+  
+  div.date {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  div.current-temp {
+    display: inline-block;
+    font-size: 3.1rem;
+    margin-left: 9px;
+    font-weight: 300;
+    line-height: 72px;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+  
+  div.clearfix {
+    text-align: center;
+    padding: 28px 0 5px 0 !important;
+  }
+  
+  div.description {
+    font-size: 13px !important;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  div.wind-humidity {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  
+  span.degree {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 38px;
+    margin-top: 4px;
+    padding-left: 8px;
+    vertical-align: top;
+  }

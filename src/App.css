@@ -1,7 +1,15 @@
-.App {
-  text-align: center;
+body {
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white !important;
 }
 
-.App .footer {
-  text-align: center;
+h1 {
+  font-family: "Montserrat", sans-serif;
+  margin: 5px 20px !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  color: white;
+  letter-spacing: 1px;
 }
