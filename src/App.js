@@ -6,23 +6,23 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-      <h1>invisible</h1>
       <Weather defaultCity="Chicago" />
 
       <footer>
-    This project was coded by
+    This project was coded by 
     <a href="https://www.shecodes.io/students/353-octavia-brown" 
     target="_blank"
     rel="noopener noreferrer">
       Octavia Brown
-    </a> 😉 This is
+    </a>{" "}😉 This is{" "}
     <a
       href="https://github.com/tavia929/weather-react"
       target="_blank"
       rel="noopener noreferrer"
       >
       open-sourced on GitHub
-    </a> and
+    </a>{" "}
+    and{" "}
     <a
       href="https://objective-elion-e8b66d.netlify.app"
       target="_blank"
