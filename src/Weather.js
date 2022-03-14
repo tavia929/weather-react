@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -31,65 +32,40 @@ export default function Weather(props) {
   }
   
   function search() {
-    let apiKey = "88d4eb2daf123ed03c1fcc34e85f4ce9";
+    const apiKey = "88d4eb2daf123ed03c1fcc34e85f4ce9";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
-  let form = (
-    <div className="col-sm-12 col-md-12 col-lg-12">
-        <form onSubmit={handleSubmit}>
-           <i className="fas fa-search icon-search"></i>
-           <input 
-            type="search" 
-            className="form-control opacity-50" 
-            placeholder="Enter a city..." 
-            onChange={handleCityChange} 
-            autoFocus={false} 
-            autoComplete="false"/>
-        </form>
-    </div>
-);
-
 if (weatherData.ready) { 
   return (
-    <div className="container">
-          <div className="search-container">
-              <h2>The only weather forecast you need</h2>
-              {form}
-              <div className="line-break"></div>
-          </div>
-          <WeatherInfo data={weatherData} />
-<footer>
-This project was coded by{" "}
-<a href="https://www.shecodes.io/students/353-octavia-brown" 
-target="_blank"
-rel="noopener noreferrer">
-  Octavia Brown
-</a>{" "}
-and is{" "}
-<a
-  href="https://github.com/tavia929/weather-react"
-  target="_blank"
-  rel="noopener noreferrer"
-  >
-  open-sourced on GitHub
-</a>{" "}
-and{" "}
-<a
-  href="https://objective-elion-e8b66d.netlify.app"
-  target="_blank"
-  rel="noopener noreferrer"
-  >
-  hosted on Netlify
-</a>
-</footer>
-  
-      </div>
-
-  );
-} else {
-   search();
-   return form;
-}
-}
+    <div className="Weather">
+    <form onSubmit={handleSubmit}> 
+    <div className="row">
+      <div className="col-9">
+      <input 
+      type="search"
+    placeholder="Enter a City..."
+    className="form-control"
+    autoFocus="on"
+    onChange={handleCityChange}
+    />
+    </div>
+    <div className="col-3">
+      <input 
+      type="submit"
+      value="search"
+      className="btn btn-primary w-100"
+/>
+</div>
+    </div>
+    </form>
+    <WeatherInfo data={weatherData} />
+    <WeatherForecast coordinates={weatherData.coord} />
+    </div>
+    );
+    } else {
+    search();
+    return "Loading...";
+    }
+  }

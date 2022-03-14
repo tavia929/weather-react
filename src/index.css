@@ -6,3 +6,8 @@ body {
 code {
   font-family: 'Courier New', Courier, monospace
 }
+
+footer {
+  text-align: center;
+  color: black;
+}
