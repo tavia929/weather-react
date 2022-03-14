@@ -9,7 +9,7 @@ export default function App() {
       <Weather defaultCity="Chicago" />
 
       <footer>
-    This project was coded by 
+    This project was coded by{" "}
     <a href="https://www.shecodes.io/students/353-octavia-brown" 
     target="_blank"
     rel="noopener noreferrer">
